@@ -1,0 +1,95 @@
+"""Ask the user to input the distance in miles and the car's miles per gallon (MPG).
+Then, inquire about the current price of gasoline per gallon and how many days they
+plan to travel. Calculate the total cost of the trip, considering changing gasoline
+prices during the journey."""
+
+distance = int(input("\n Enter the number of miles your trip will take "))
+MPG = int(input("\n Enter the car's miles per gallon "))
+currentprice = int(input("\n What is the current price of gasoline per gallon? "))
+days = input("\n How many days do you plan to travel? ")
+
+price = (distance * MPG) / currentprice
+
+print("\n The price of the trip will be approximately", price)
+
+"""p2_unit_conversion.py
+Create a program that allows the user to convert between different units of
+measurement, such as miles to kilometers, liters to gallons, or Fahrenheit to Celsius.
+The program should prompt the user for the quantity and unit of origin and the unit of
+destination, then perform the conversion."""
+
+
+fromu = input("\n Enter if your unit is miles, liters or farenheit ")
+fromunum = int(input("\n Enter the quantity "))
+tou = input("\n Enter if your unit will be converted to kilometers, gallons or celsius ")
+
+if tou == "kilometers" and fromu == "miles":
+  conversion = (fromunum * 1.60934)
+
+elif tou == "gallons" and fromu == "liters":
+  conversion = (fromunum * 3.7854)
+
+elif tou == "celsius" and fromu == "farenheit":
+  conversion = (fromunum - 32) * 5/9
+
+
+print("\n The result of your conversion is", conversion)
+"""Create a program that helps a person calculate how much they need to save
+monthly for their retirement. Ask the user for their current age, the age at which they
+plan to retire, and the desired retirement amount. Then, calculate how much they
+should save monthly, considering an expected annual investment return. Use the
+Display the monthly payment required to reach the retirement goal."""
+
+age = int(input("\n To know how much you need to save for retirement enter first your current age "))
+retirementage = int(input("\n Now the age when you plan to retire"))
+FV = int(input("\n Now enter the desired retirement amount "))
+r = float(input("\n Enter monthly interest rate(annual return over 12 expressed as decimal"))
+t = retirementage - age
+n = t * 12 
+
+PMT = (FV * r)/((((1 + r)**n) - 1 )) * ((1 + r)**(-t))
+
+print("You need to save monthly $", PMT)
+""" .Multiple Discounts Purchase.
+p2_multiple_discounts.py
+Write a program that allows the user to enter the price of a product and its category
+(A, B, or C). Then, apply discounts based on the category and the number of units
+purchased. For example:
+Category A: 10% discount.
+Category B: 5% discount.
+Category C: 2% discount.
+Furthermore, if the user buys more than 10 units, an additional 5% discount is
+applied. Display the final price after all discounts.
+"""
+print("There are different discounts, A=10, B=5 and C=2")
+number = int(input("Please enter the number of products that you are purchasing "))
+
+category = input("\n Please enter the category (A, B or C) ")
+
+price = float(input("\n Please enter the price of the product before discount "))
+
+if category == "A":
+  discount = 0.10
+elif category == "B":
+  discount = 0.05
+elif category == "C":
+  discount = 0.02
+
+if number >= 10:
+  discount = discount + 0.05
+  print("discount")
+  print("The additional discount applied is", 0.05)
+
+applied = discount * price
+total = price - applied 
+
+print("Discount ",applied, "Your total is ",total)
+print("The price before discount is ", price)
+print("The discount applied is", category)
+
+
+
+
+
+
+
