@@ -1,0 +1,34 @@
+print("This progrm will help you evaluate students")
+
+q = []
+
+ag = int(input("\n Please insert the average grade of the student: "))
+ps = int(input("\n Please insert the project score: "))
+cp = input("\n Please insert the classroom participation yes or no: ")
+
+if ag and ps >= 75 and cp == "yes":
+  print("\n The student is in good academic standing ")
+if ps >= 90:
+  print("\n The student deserves a distinction ")
+if ag <= 60 or cp == "no":
+  print("\n The student needs to improve their performance ")
+
+more = input("\n Are there any more students? yes or no ")
+while more == "yes": 
+  ag = int(input("\n Please insert the average grade of the student: "))
+  ps = int(input("\n Please insert the project score: "))
+  cp = input("\n Please insert the classroom participation yes or no: ")
+
+  if ag and ps >= 75 and cp == "yes":
+    print("\n The student is in good academic standing ")
+  if ps >= 90:
+    print("\n The student deserves a distinction ")
+  if ag <= 60 or cp == "no":
+    print("\n The student needs to improve their performance ")
+  
+  more = input("\n Are there any more students? yes or no ")
+  
+  if more == "no":
+    print("\n The evaluation is done :)")
+
+
