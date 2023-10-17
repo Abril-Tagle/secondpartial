@@ -1,0 +1,85 @@
+"""Instructions:
+1. Create a Python program that formulates questions related to mental health.
+2. Utilize the content from the 'Mental Health Habits' video we watched in class as a
+reference.
+3. Your program should provide recommendations for improving mental health based on the
+questions.
+4. Ensure that your code is well-structured and follows PEP8 coding conventions.
+5. Please use AND and OR operators in your code.
+6. This exercise serves as an attendance requirement.
+"""
+
+a = input("Welcome, how are you feling today? good, bad or meh ")
+if a == "good":
+    print("\n Congratulations! Remember to always exercise, eat helthy, talk to your friends or family and do activities that help you relax!")  
+elif a == "meh":
+  print("\n That's okay, we all feel meh from time to time ")
+elif a == "bad":
+    print("\n I'm sorry to hear that.")
+    b = input("\n Have you talked to someone about it? yes or no ")
+    if b == "yes":
+      print("\n That's great!")
+    elif b == "no":
+      print("\n Well, you can talk to me about it.")
+      c = input("\n What's going on? ")
+      if c == "nothing":
+        print("\n Oh, I see, what I can do in the meantime for you to feel better is to go for a walk or do some exercise ")
+      else: 
+        d = input("\n Oh, that's rough, what I can do in the meantime is advise you to go for a walk or do some exercise, do you want me to give you more activities to do that can make you feel better? yes or no ")
+        if d == "yes":
+          print("\n Well, the list is the following: if you have a pet, play with it; seek support from a friend or family member; if you consider it necessary, visit a therapist; dedicate some time to your hobbies; meditate")
+        else:
+          print("\n Understandable but remember that you are not alone and if you are worried about your mental health please seek the help of a professional")
+      
+    
+  
+elif a == "bad":
+    print("\n That's awful, why?.")
+else:
+    e = ("\n oh okay. Do you want to talk about it? yes or no ")
+    if e == "yes":
+      f = ("\n Can I give you some advice? yes or no ")
+      if f == "yes":
+        print("\n Well, the list is the following: if you have a pet, play with it; seek support from a friend or family member; if you consider it necessary, visit a therapist; dedicate some time to your hobbies; meditate")
+      else:
+        print("\n Understandable but remember that you are not alone and if you are worried about your mental health please seek the help of a professional")
+    if e == "no":
+      print("\n Understandable but remember that you are not alone and if you are worried about your mental health please seek the help of a professional")
+
+print("\n Now we will make a little asessment ")
+
+quiz = input("\n Should we begin? yes or no ")
+if quiz == "yes":
+  print("\n Lets go ahead!")
+  print("\n Question 1: ")
+  print("\n Are you able to focus on your work? yes or no ")
+  a1 = input()
+  if a1 == "yes":
+    print("\n Great! ")
+  elif a1 == "no":
+    print("\n Well, that's rough :(")
+  print("\n Question 2: ")
+  print("\n Have you been feeling down for at least 2 weeks? yes or no ")
+  a2 = input()
+  if a2 == "yes":
+    print("\n Well, that's rough :(")
+  if a2 == "no":
+    print("Well, thats amazing!")
+  print("\n Question 3:")
+  print("Have you been feeling worried for no reason at all?")
+  a3 = input()
+  if a3 == "yes":
+    print("\n Well, that's rough :(")
+  if a3 == "no":
+    print("OMG, thats good to hear!")
+  if a2 and a3 == "yes":
+    print("\n Well, you are definetely showing signs of mental health issues. I would greatly advise you to seek help from a professional")
+  elif a2 and a3 == "no":
+    print("\n Well, its amazing that you have been feeling good!")
+  elif a2 or a3 == "yes":
+    print("\n I see you may or may not need help, but I would  advise you to talk to someone you trust about it, if you keep feeling dwn please seek help from a professional.")
+  if a1 == "no":
+    print("\n I see you may or may not have some symptoms of anxiety, you should speak to a professional just to make sure that everything's okay.")
+
+print("\n That's it for today, thaks for sharing your thoughts with me, remember that you are not alone and that you can talk to me when you need to. I hope you have a great day, see you later!" )
+  
