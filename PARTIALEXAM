@@ -1,0 +1,22 @@
+https://replit.com/join/vofdnzakyv-abril-andreaand = REPLIT LINK
+
+print("Take care of Ruby: ")
+
+temp = int(input("\n Insert ambient temperature in Celsius degrees, don´t use signs "))
+hum = int(input("\n Now the humidity percentage in the air around without any signs "))
+day = input("\n Insert the day of the week, no capital letters or ending ´day´ " )
+
+if temp >=20 and temp <= 25:
+  print("\n Good conditions")
+if temp <= 20:
+  print("\n Bring it inside the house")
+if temp >= 25:
+  print("\n Bring it inside the house and turn on the fan")
+if day == "thurs" or day == "tues" or day == "satur":
+  print("\n Water Ruby")
+if hum >= 22 and day == "mon" or day == "wednes" or day == "fri" or day == "sun":
+  print("\n It is not necessary to water Ruby")
+if hum <= 20:
+  print("\n You should water Ruby")
+if hum >= 20 and hum <= 22:
+ print("\n Suitable humidity")
